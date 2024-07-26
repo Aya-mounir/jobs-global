@@ -1,0 +1,104 @@
+@import "../variables/variables";
+// ========================== Shared Styling ==============================
+p {
+  margin: 0 !important;
+  color: $dark_gray;
+}
+body {
+  margin: unset;
+}
+
+// filled button and nav item style
+.filled {
+  background-color: $main_color;
+  color: #fff;
+  border-radius: 50px;
+  box-shadow: #00000047 0px 2px 5px;
+  padding: 0.5rem 1.5rem;
+  &:hover{
+    background-color: #8d44ada5;
+  }
+}
+.p-toast-message-error{
+  border-radius: 5px;
+  border-left: 5px solid rgb(146, 7, 7);
+  color: rgb(146, 7, 7);
+  background-color: rgb(255, 194, 194);
+  *{
+    align-items: center;
+    justify-content: center;
+    margin: 0.25rem;
+  }
+}
+.p-toast-message-success{
+  border-radius: 5px;
+  border-left: 5px solid rgb(13, 79, 5);
+  color: rgb(13, 79, 5);
+  background-color: rgb(156, 228, 165);
+  *{
+    align-items: center;
+    justify-content: center;
+    margin: 0.25rem;
+  }
+}
+
+// outlined button style
+.outlined {
+  background-color: #F5F5F5;
+  color:$main_color;
+  border-radius: 50px;
+  border: 1px solid $main_color;
+  border-radius: 3px;
+  box-shadow: #00000047 0px 2px 5px;
+
+  &:hover{
+    background-color: $main_color !important;
+    color: #fff !important;
+    }
+}
+// =========================== buttons ====================================
+button {
+  border: none;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  border-radius: 50px;
+
+}
+
+// ================================= form ============================
+.form_item {
+  width: 100%;
+  border-radius: 8px;
+  color: $gray;
+  margin-bottom: 1.25rem !important;
+  label {
+    display: block;
+    color: $gray;
+    font-size: 0.875rem;
+    margin-bottom: 5px;
+  }
+  input {
+    width: 100%;
+    border: 1px solid $input_border;
+    border-radius: 3px;
+    color: $dark_gray;
+    padding: 7px;
+    font-size: 1rem;
+    &::placeholder {
+      color: $gray;
+      font-size: 0.9375rem;
+    }
+    &:focus {
+      outline-color: $main_color;
+      outline-width: 1px !important;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.p-error{
+  font-size: 0.8rem;
+}

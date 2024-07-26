@@ -1,0 +1,22 @@
+@import '../../../assets/styles/variables/variables';
+.login_page{
+  h2{
+    color: $dark_gray;
+    font-weight: 400;
+    font-size: 1.5625rem;
+  }
+  .sub_title{
+      color: $gray;
+      font-size: 0.9375rem;
+      margin-bottom: 3rem !important;
+      span{
+        color: $main_color;
+      }
+  }
+  .forget_password{
+    color: $main_color;
+    cursor: pointer;
+    font-size: 0.875rem;
+  }
+
+}

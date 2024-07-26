@@ -1,0 +1,23 @@
+<div class="nav_bar w-full py-3  flex items-center justify-center">
+  <div class="container flex items-center justify-between">
+    <!-- Logo -->
+    <div class="logo flex items-center">
+      <p class="logo_title mx-2">Jobs Global</p>
+    </div>
+    <!-- Logo End -->
+    <!-- Pages -->
+    <div class="pages flex items-center flex-wrap">
+      <!-- Nav Items -->
+      <div
+        class="nav_item py-5"
+        [ngClass]="item.active ? 'filled' : ''"
+        *ngFor="let item of navItems"
+        (click)="changeStatus(item.title)"
+      >
+        {{ item.title }}
+      </div>
+      <!-- Nav Items End -->
+    </div>
+    <!-- Pages End  -->
+  </div>
+</div>

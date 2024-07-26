@@ -1,0 +1,38 @@
+@import "../../../../assets/styles/variables/variables";
+
+.nav_bar {
+  box-shadow: #766e6e5c 0px 2px 9px;
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+  .logo {
+    img {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+    .logo_title {
+      color: $main_color;
+      text-transform: uppercase;
+      font-size: 1.25rem;
+      font-weight: 400;
+    }
+  }
+  .pages {
+    .nav_item {
+      text-transform: uppercase;
+      font-size: 0.9375rem;
+      font-weight: 400;
+      padding: 0 0.46875rem 0 0.46875rem;
+      margin: 0 0.46875rem 0 0.46875rem;
+      cursor: pointer;
+      &:hover{
+        background-color: #8d44ada5;
+        color: #fff;
+        border-radius: 50px;
+        box-shadow: #00000047 0px 2px 5px;
+
+      }
+    }
+
+  }
+}
