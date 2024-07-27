@@ -1,4 +1,4 @@
-export interface User {
+export interface Job {
   id: number;
   email: string;
   first_name: string;

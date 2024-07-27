@@ -1,6 +1,6 @@
-// user.actions.ts
+// Job.actions.ts
 import { createAction, props } from '@ngrx/store';
-import { User } from './user.model';
+import { Job } from './job.model';
 
-export const loadUser = createAction('[User] Load User', props<{ user: User }>());
-export const resetUser = createAction('[User] Reset User');
+export const loadJob = createAction('[Job] Load Job', props<{ job: Job }>());
+export const resetJob = createAction('[Job] Reset Job');

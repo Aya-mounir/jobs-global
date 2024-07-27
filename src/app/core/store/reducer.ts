@@ -1,18 +1,18 @@
-// user.reducer.ts
+// job.reducer.ts
 import { createReducer, on } from '@ngrx/store';
-import { User } from './user.model';
-import { loadUser, resetUser } from './actions';
+import { Job } from './job.model';
+import { loadJob, resetJob } from './actions';
 
-export interface UserState {
-  user: User;
+export interface JobState {
+  job: Job;
 }
 
-export const initialState: UserState = {
-  user: { id: -1, email: '', first_name: '', last_name: '', avatar: '' },
+export const initialState: JobState = {
+  job: { id: -1, email: '', first_name: '', last_name: '', avatar: '' },
 };
 
-export const userReducer = createReducer(
+export const JobReducer = createReducer(
   initialState,
-  on(loadUser, (state, { user }) => ({ ...state, user })),
-  on(resetUser, (state) => ({ ...state, user:  { id: -1, email: '', first_name: '', last_name: '', avatar: '' } }))
+  on(loadJob, (state, { job }) => ({ ...state, job })),
+  on(resetJob, (state) => ({ ...state, job:  { id: -1, email: '', first_name: '', last_name: '', avatar: '' } }))
 );

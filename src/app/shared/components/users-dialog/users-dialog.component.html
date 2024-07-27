@@ -1,4 +1,4 @@
-<div class="users_dialog w-100">
+<div class="users_dialog w-full">
   <!-- Toast -->
   <p-toast></p-toast>
   <!-- Toast End-->
@@ -10,7 +10,7 @@
   >
     <!-- Add and Update Form -->
     <div
-      class="add_update w-100 h-100 d-flex flex-column align-items-center"
+      class="add_update w-full h-100 d-flex flex-column align-items-center"
       *ngIf="isAdd || isUpdate"
     >
       <!-- Avatar -->
@@ -20,7 +20,7 @@
       </div>
       <!-- Avatar End -->
       <!-- Form -->
-      <form [formGroup]="userForm" class="w-100">
+      <form [formGroup]="userForm" class="w-full">
         <!-- name -->
         <div class="form_item mb-3">
           <label for="name">Name</label>
@@ -82,7 +82,7 @@
         </div>
         <!-- job End -->
         <!-- Action Buttons -->
-        <div class="btns w-100 d-flex justify-content-between">
+        <div class="btns w-full d-flex justify-content-between">
           <button class="cancel outlined" (click)="cancel()">cancel</button>
           <button class="action filled text-center" (click)="onSubmit()">
             {{ isAdd ? "Add" : "Save" }}
@@ -99,13 +99,13 @@
 
     <!-- Delete -->
     <div
-      class="delete w-100 h-100 d-flex flex-column align-items-center"
+      class="delete w-full h-100 d-flex flex-column align-items-center"
       *ngIf="isDelete"
     >
       <p class="delete_confirmation">Are you sure you want to delete</p>
       <h4 class="name my-3">{{ user.first_name }} {{ user.last_name }}</h4>
       <!-- Action Buttons -->
-      <div class="btns w-100 d-flex justify-content-between">
+      <div class="btns w-full d-flex justify-content-between">
         <button class="cancel outlined" (click)="cancel()">No</button>
         <button class="action filled text-center" (click)="deleteUser()">
           Yes

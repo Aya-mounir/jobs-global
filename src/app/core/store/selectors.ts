@@ -1,7 +1,7 @@
-// user.selectors.ts
+// job.selectors.ts
 import { createSelector, createFeatureSelector } from '@ngrx/store';
-import { UserState } from './reducer';
+import { JobState } from './reducer';
 
-export const selectUserState = createFeatureSelector<UserState>('user');
+export const selectJobState = createFeatureSelector<JobState>('Job');
 
-export const selectUser = createSelector(selectUserState, (state: UserState) => state.user);
+export const selectJob = createSelector(selectJobState, (state: JobState) => state.job);

@@ -7,7 +7,23 @@ p {
 body {
   margin: unset;
 }
+.p-icon-field{
+  margin: 0.5rem;
+  border-radius: 5px;
 
+  padding: 0.7rem;
+  border:1px solid $gray;
+  input{
+    &:focus-visible{
+      outline: none;
+    }
+  }
+
+}
+.toggle {
+  color: blue;
+  cursor: pointer;
+}
 // filled button and nav item style
 .filled {
   background-color: $main_color;
@@ -41,8 +57,11 @@ body {
     margin: 0.25rem;
   }
 }
-
-// outlined button style
+.p-dataview-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 .outlined {
   background-color: #F5F5F5;
   color:$main_color;
