@@ -13,6 +13,7 @@
     <div
       class="max-w-sm rounded overflow-hidden shadow-lg m-4 lg:w-1/4"
       *ngFor="let item of jobs"
+      (click)="setjobDetails(item)"
     >
       <img class="w-full" [src]="item.cover" alt="Sunset in the mountains" />
       <div class="px-6 py-4">
@@ -29,15 +30,24 @@
         </p>
         <p class="text-gray-700 text-base">
           <i class="pi pi-calendar"></i>
-          {{ item.page.updated_at ? item.page.updated_at  : "No date Found!" }}
+          {{ item.page.updated_at ? item.page.updated_at : "No date Found!" }}
         </p>
-        <p class="text-gray-700 text-base" appSeeMoreLess *ngIf="item.description">
+        <p
+          class="text-gray-700 text-base"
+          appSeeMoreLess
+          *ngIf="item.description"
+        >
           {{ item.description }}
         </p>
-        <p class="text-gray-700 text-base" appSeeMoreLess *ngIf="!item.description">
+        <p
+          class="text-gray-700 text-base"
+          appSeeMoreLess
+          *ngIf="!item.description"
+        >
           No decription found!
         </p>
       </div>
     </div>
   </div>
 </div>
+<app-dialog [visible]="showDetails" [details]="true" (closeDialog)="close()"></app-dialog>

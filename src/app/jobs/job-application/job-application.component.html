@@ -1,1 +1,264 @@
-<p>job-application works!</p>
+<div class="application_form w-full">
+  <p-toast></p-toast>
+
+  <!-- Form -->
+  <form [formGroup]="applicationForm">
+    <div class="flex w-full gap-2">
+      <!-- name -->
+      <div class="form_item w-full">
+        <label for="name">Name</label>
+        <input type="text" formControlName="name" />
+        <!-- Validations -->
+        <ng-container
+          *ngIf="
+            applicationForm.controls['name'].invalid &&
+            applicationForm.controls['name'].touched
+          "
+        >
+          <div
+            *ngIf="applicationForm.controls['name'].errors?.['required']"
+            class="text-red-600"
+          >
+            Required Field
+          </div>
+          <div
+            *ngIf="applicationForm.controls['name'].errors?.['custom']"
+            class="text-red-600"
+          >
+            {{applicationForm.controls['name'].errors?.['custom'] }}
+          </div>
+        </ng-container>
+        <!-- Validations End -->
+      </div>
+      <!-- name End -->
+      <!-- Email -->
+      <div class="form_item">
+        <label for="email">Email</label>
+        <input type="email" formControlName="email" />
+        <!-- Validations -->
+        <ng-container
+          *ngIf="
+            applicationForm.controls['email'].invalid &&
+            applicationForm.controls['email'].touched
+          "
+        >
+          <div
+            *ngIf="applicationForm.controls['email'].errors?.['required']"
+            class="text-red-600"
+          >
+            Required Field
+          </div>
+          <div
+            *ngIf="applicationForm.controls['email'].errors?.['custom']"
+            class="text-red-600"
+          >
+            {{applicationForm.controls['email'].errors?.['custom'] }}
+          </div>
+        </ng-container>
+        <!-- Validations End -->
+      </div>
+      <!-- Email End -->
+    </div>
+    <div class="flex w-full gap-2">
+      <!-- phone -->
+      <div class="form_item">
+        <label for="phone">Phone Number</label>
+        <input type="tel" formControlName="phone" />
+        <!-- Validations -->
+        <ng-container
+          *ngIf="
+            applicationForm.controls['phone'].invalid &&
+            applicationForm.controls['phone'].touched
+          "
+        >
+          <div
+            *ngIf="applicationForm.controls['phone'].errors?.['required']"
+            class="text-red-600"
+          >
+            Required Field
+          </div>
+          <div
+            *ngIf="applicationForm.controls['phone'].errors?.['custom']"
+            class="text-red-600"
+          >
+            {{applicationForm.controls['phone'].errors?.['custom'] }}
+          </div>
+        </ng-container>
+        <!-- Validations End -->
+      </div>
+      <!-- phone End -->
+      <!-- country -->
+      <div class="form_item">
+        <label for="country">Country</label>
+        <p-dropdown
+          [options]="countries"
+          formControlName="country"
+          optionLabel="name"
+          placeholder="Select a Country"
+        >
+
+        </p-dropdown>
+        <!-- Validations -->
+        <ng-container
+          *ngIf="
+            applicationForm.controls['country'].invalid &&
+            applicationForm.controls['country'].touched
+          "
+        >
+          <div
+            *ngIf="applicationForm.controls['country'].errors?.['required']"
+            class="text-red-600"
+          >
+            Required Field
+          </div>
+          <div
+            *ngIf="applicationForm.controls['country'].errors?.['custom']"
+            class="text-red-600"
+          >
+            {{applicationForm.controls['country'].errors?.['custom'] }}
+          </div>
+        </ng-container>
+        <!-- Validations End -->
+      </div>
+      <!-- country End -->
+    </div>
+    <div class="flex w-full gap-2">
+      <!-- education -->
+      <div class="form_item">
+        <label for="education">Education</label>
+        <input type="text" formControlName="education" />
+        <!-- Validations -->
+        <ng-container
+          *ngIf="
+            applicationForm.controls['education'].invalid &&
+            applicationForm.controls['education'].touched
+          "
+        >
+          <div
+            *ngIf="applicationForm.controls['education'].errors?.['required']"
+            class="text-red-600"
+          >
+            Required Field
+          </div>
+          <div
+            *ngIf="applicationForm.controls['education'].errors?.['custom']"
+            class="text-red-600"
+          >
+            {{applicationForm.controls['education'].errors?.['custom'] }}
+          </div>
+        </ng-container>
+        <!-- Validations End -->
+      </div>
+      <!-- education End -->
+      <!-- company -->
+      <div class="form_item">
+        <label for="company">Current Company</label>
+        <input type="text" formControlName="company" />
+        <!-- Validations -->
+        <ng-container
+          *ngIf="
+            applicationForm.controls['company'].invalid &&
+            applicationForm.controls['company'].touched
+          "
+        >
+          <div
+            *ngIf="applicationForm.controls['company'].errors?.['required']"
+            class="text-red-600"
+          >
+            Required Field
+          </div>
+          <div
+            *ngIf="applicationForm.controls['company'].errors?.['custom']"
+            class="text-red-600"
+          >
+            {{applicationForm.controls['company'].errors?.['custom'] }}
+          </div>
+        </ng-container>
+        <!-- Validations End -->
+      </div>
+      <!-- company End -->
+    </div>
+    <!-- position -->
+    <div class="form_item">
+      <label for="position">Position</label>
+      <input type="text" formControlName="position" />
+      <!-- Validations -->
+      <ng-container
+        *ngIf="
+          applicationForm.controls['position'].invalid &&
+          applicationForm.controls['position'].touched
+        "
+      >
+        <div
+          *ngIf="applicationForm.controls['position'].errors?.['required']"
+          class="text-red-600"
+        >
+          Required Field
+        </div>
+        <div
+          *ngIf="applicationForm.controls['position'].errors?.['custom']"
+          class="text-red-600"
+        >
+          {{applicationForm.controls['position'].errors?.['custom'] }}
+        </div>
+      </ng-container>
+      <!-- Validations End -->
+    </div>
+    <!-- position End -->
+    <!-- coverLetter -->
+    <div class="form_item">
+      <label for="coverLetter">Cover Letter</label>
+      <textarea type="text" formControlName="coverLetter"></textarea>
+      <!-- Validations -->
+      <ng-container
+        *ngIf="
+          applicationForm.controls['coverLetter'].invalid &&
+          applicationForm.controls['coverLetter'].touched
+        "
+      >
+        <div
+          *ngIf="applicationForm.controls['coverLetter'].errors?.['required']"
+          class="text-red-600"
+        >
+          Required Field
+        </div>
+        <div
+          *ngIf="applicationForm.controls['coverLetter'].errors?.['custom']"
+          class="text-red-600"
+        >
+          {{applicationForm.controls['coverLetter'].errors?.['custom'] }}
+        </div>
+      </ng-container>
+      <!-- Validations End -->
+    </div>
+    <!-- coverLetter End -->
+    <div class="card flex justify-content-center">
+      <p-toast />
+      <p-fileUpload
+        mode="basic"
+        chooseLabel="Choose"
+        chooseIcon="pi pi-upload"
+        name="demo[]"
+        url="https://www.primefaces.org/cdn/api/upload.php"
+        accept="image/*"
+        maxFileSize="3000000"
+        (onUpload)="onUpload($event)"
+      />
+    </div>
+
+    <div class="form_actions flex justify-end gap-2 w-full">
+      <button
+        class="filled"
+        [disabled]="applied"
+        severity="secondary"
+        (click)="apply()"
+      >
+        Apply
+      </button>
+      <button class="filled" severity="secondary" (click)="closeDialog()">
+        Cancel
+      </button>
+    </div>
+  </form>
+  <!-- Form End -->
+</div>

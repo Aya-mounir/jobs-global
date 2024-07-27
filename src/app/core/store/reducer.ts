@@ -8,11 +8,11 @@ export interface JobState {
 }
 
 export const initialState: JobState = {
-  job: { id: -1, email: '', first_name: '', last_name: '', avatar: '' },
+  job: {  id: '', company_email: '', title: '', description: '', salary: 0,skills:'',priority:'' },
 };
 
 export const JobReducer = createReducer(
   initialState,
   on(loadJob, (state, { job }) => ({ ...state, job })),
-  on(resetJob, (state) => ({ ...state, job:  { id: -1, email: '', first_name: '', last_name: '', avatar: '' } }))
+  on(resetJob, (state) => ({ ...state, job:  { id: '', company_email: '', title: '', description: '', salary: 0,skills:'',priority:'' } }))
 );

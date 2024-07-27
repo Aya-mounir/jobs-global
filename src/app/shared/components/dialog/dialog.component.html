@@ -1,0 +1,17 @@
+<div class="card flex justify-center">
+  <p-dialog [modal]="true" [(visible)]="visible" [style]="{ width: '25rem' }">
+    <!-- details -->
+    <app-job-detail
+      *ngIf="details"
+      (apply)="checkApply()"
+      (close)="close()"
+    ></app-job-detail>
+    <!-- details end -->
+    <!-- Application -->
+    <app-job-application
+      *ngIf="!details"
+      (close)="close()"
+    ></app-job-application>
+    <!-- Application End -->
+  </p-dialog>
+</div>

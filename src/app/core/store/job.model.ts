@@ -1,7 +1,9 @@
 export interface Job {
-  id: number;
-  email: string;
-  first_name: string;
-  last_name: string;
-  avatar: string;
+  id: string;
+  title: string;
+  salary: number;
+  description: string;
+  skills: string;
+  priority: string;
+  company_email: string;
 }
